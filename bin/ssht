@@ -1,0 +1,4 @@
+#!/bin/sh 
+
+ssh $* -t 'tmux a || tmux || $(getent passwd $LOGNAME | cut -d: -f7)'
+
